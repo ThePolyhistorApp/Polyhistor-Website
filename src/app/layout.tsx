@@ -25,7 +25,10 @@ export const metadata: Metadata = {
     "group trip coordination",
     "safety alerts",
   ],
-
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     type: "website",
     url: siteConfig.url,
@@ -39,6 +42,13 @@ export const metadata: Metadata = {
         alt: "PolyHistor App - AI-Powered Group Travel Planning & Safety",
       },
     ],
+  },
+  // --- ADDITION: Twitter Card Tags ---
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/social-card.jpg`],
   },
 };
 
