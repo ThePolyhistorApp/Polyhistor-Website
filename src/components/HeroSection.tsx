@@ -1,9 +1,15 @@
+// src/components/HeroSection.tsx
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function HeroSection() {
+// Accept the onClick function as a prop
+export default function HeroSection({
+  onJoinWaitlistClick,
+}: {
+  onJoinWaitlistClick: () => void;
+}) {
   return (
     <section className="min-h-screen bg-gray-50 flex items-center justify-center p-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -21,6 +27,7 @@ export default function HeroSection() {
             plans, location, and safety into one intelligent app.
           </p>
           <motion.button
+            onClick={onJoinWaitlistClick}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="mt-8 bg-brand-coral text-white font-bold py-3 px-8 rounded-lg shadow-lg"
