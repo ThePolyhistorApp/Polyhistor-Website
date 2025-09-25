@@ -10,7 +10,7 @@ const manrope = Manrope({
 const siteConfig = {
   title: "PolyHistor | AI-Powered Group Travel Planning & Safety App",
   description:
-    "PolyHistor is the all-in-one AI app for group travel, simplifying planning, coordination, and safety. Get proactive safety alerts and generate custom itineraries instantly. Join the waitlist today.",
+    "PolyHistor is the all-in-one AI app for group travel, unifying planning, coordination, and proactive safety alerts. Generate custom itineraries instantly.",
   url: "https://thepolyhistor.com",
 };
 
