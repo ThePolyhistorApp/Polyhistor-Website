@@ -1,11 +1,10 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Play, Pause } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
-// 1. UPDATED DATA: Each feature now has its own width and height
 const features = [
   {
     title: "AI Trip Planner",
@@ -35,26 +34,43 @@ const features = [
 
 export default function FeaturesSection() {
   const [[page, direction], setPage] = useState([0, 0]);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  const paginate = (newDirection: number) => {
-    let newPage = page + newDirection;
-    if (newPage < 0) {
-      newPage = features.length - 1;
-    } else if (newPage >= features.length) {
-      newPage = 0;
-    }
+  const paginate = useCallback((newDirection: number) => {
+    setPage((prevPage) => {
+      let newPage = prevPage[0] + newDirection;
+      if (newPage < 0) {
+        newPage = features.length - 1;
+      } else if (newPage >= features.length) {
+        newPage = 0;
+      }
+      return [newPage, newDirection];
+    });
+  }, []);
+
+  const jumpToPage = (newPage: number) => {
+    const newDirection = newPage > page ? 1 : -1;
     setPage([newPage, newDirection]);
   };
 
   const currentFeature = features[page];
 
   useEffect(() => {
+    if (!isPlaying) {
+      return;
+    }
     const interval = setInterval(() => {
       paginate(1);
-    }, 5000);
+    }, 4000);
 
-    return () => clearInterval(interval);
-  }, [page]);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [isPlaying, paginate]);
+
+  const handleTogglePlay = () => {
+    setIsPlaying(!isPlaying);
+  };
 
   return (
     <section className="py-20 bg-white overflow-hidden">
@@ -65,8 +81,7 @@ export default function FeaturesSection() {
           </h2>
         </div>
 
-        {/* 3. REMOVED fixed height (h-[...]) to allow the container to adapt */}
-        <div className="relative min-h-[550px] px-10 flex items-center">
+        <div className="relative h-[700px] md:min-h-[550px] flex items-center">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -89,7 +104,7 @@ export default function FeaturesSection() {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              className="w-full absolute inset-0 grid md:grid-cols-2 gap-12 items-center"
+              className="w-full h-full absolute inset-0 grid grid-cols-1 grid-rows-[auto,1fr] md:grid-cols-2 md:grid-rows-1 gap-8 p-4 items-center"
             >
               {/* Text Content */}
               <div
@@ -105,42 +120,56 @@ export default function FeaturesSection() {
                 </p>
               </div>
 
-              <div className="w-full flex items-center justify-center">
+              {/* Image Container */}
+              <div className="relative w-full h-full">
                 <Image
                   src={currentFeature.visual}
                   alt={`${currentFeature.title} mockup`}
-                  width={currentFeature.width}
-                  height={currentFeature.height}
+                  layout="fill"
+                  objectFit="contain"
                   unoptimized={currentFeature.visual.endsWith(".gif")}
-                  className="rounded-xl shadow-2xl object-contain"
+                  className="rounded-xl shadow-2xl"
                 />
               </div>
             </motion.div>
           </AnimatePresence>
-
-          <button
-            onClick={() => paginate(-1)}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 shadow-md z-10"
-          >
-            <ArrowLeft className="h-6 w-6 text-brand-blue" />
-          </button>
-          <button
-            onClick={() => paginate(1)}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 shadow-md z-10"
-          >
-            <ArrowRight className="h-6 w-6 text-brand-blue" />
-          </button>
         </div>
 
-        <div className="flex justify-center space-x-3 mt-8">
-          {features.map((_, i) => (
-            <div
-              key={i}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                page === i ? "bg-brand-coral" : "bg-gray-300"
-              }`}
-            />
-          ))}
+        {/* Minimal controls layout */}
+        <div className="flex justify-center items-center space-x-4 mt-8">
+          {/* Pagination Dots */}
+          <div className="flex items-center space-x-3">
+            {features.map((_, i) => (
+              // MODIFIED: Wrapped dot in a button with onClick
+              <button
+                key={i}
+                onClick={() => jumpToPage(i)}
+                className="p-1 rounded-full"
+                aria-label={`Go to slide ${i + 1}`}
+              >
+                <div
+                  className={`h-2 w-2 rounded-full transition-colors ${
+                    page === i ? "bg-brand-coral" : "bg-gray-300"
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+
+          {/* Small Play/Pause Button */}
+          <button
+            onClick={handleTogglePlay}
+            className="rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-brand-blue transition-colors"
+            aria-label={
+              isPlaying ? "Pause automatic sliding" : "Play automatic sliding"
+            }
+          >
+            {isPlaying ? (
+              <Pause className="h-3 w-3" />
+            ) : (
+              <Play className="h-3 w-3" />
+            )}
+          </button>
         </div>
       </div>
     </section>
