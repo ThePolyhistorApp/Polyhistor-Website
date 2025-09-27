@@ -2,7 +2,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 // Accept the onClick function as a prop
 export default function HeroSection({
@@ -42,20 +41,21 @@ export default function HeroSection({
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex justify-center order-1 md:order-2"
         >
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+          {/* Replaced the Image component with the HTML video tag */}
+          <video
+            width="500"
+            height="500"
+            autoPlay
+            muted
+            playsInline
+            className="w-full h-auto max-w-md"
           >
-            <Image
-              src="/logo.png"
-              alt="PolyHistor Compass Logo"
-              width={500}
-              height={500}
-              priority
-            />
-          </motion.div>
+            <source src="/logo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </motion.div>
       </div>
     </section>
   );
 }
+
