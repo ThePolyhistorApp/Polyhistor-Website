@@ -26,12 +26,11 @@ const features = [
     title: "Proactive Safety Alerts",
     description:
       "Receive intelligent notifications when your group is near high-crime areas, so you can make safer choices. Our predictive AI acts as your safety co-pilot in unfamiliar places.",
-    visual: "/realtimealerts.png",
+    visual: "/Safetyalerts.png",
     width: 270,
     height: 550,
   },
 ];
-
 export default function FeaturesSection() {
   const [[page, direction], setPage] = useState([0, 0]);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -81,7 +80,8 @@ export default function FeaturesSection() {
           </h2>
         </div>
 
-        <div className="relative h-[700px] md:min-h-[550px] flex items-center">
+        {/* MODIFIED: Using a stable container with a fixed height */}
+        <div className="relative h-[550px]">
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={page}
@@ -104,7 +104,7 @@ export default function FeaturesSection() {
                 x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.2 },
               }}
-              className="w-full h-full absolute inset-0 grid grid-cols-1 grid-rows-[auto,1fr] md:grid-cols-2 md:grid-rows-1 gap-8 p-4 items-center"
+              className="w-full h-full absolute inset-0 grid grid-cols-1 md:grid-cols-2 gap-8 p-4 items-center"
             >
               {/* Text Content */}
               <div
@@ -120,7 +120,7 @@ export default function FeaturesSection() {
                 </p>
               </div>
 
-              {/* Image Container */}
+              {/* MODIFIED: Using layout="fill" for a consistent image container */}
               <div className="relative w-full h-full">
                 <Image
                   src={currentFeature.visual}
@@ -128,19 +128,18 @@ export default function FeaturesSection() {
                   layout="fill"
                   objectFit="contain"
                   unoptimized={currentFeature.visual.endsWith(".gif")}
-                  className="rounded-xl shadow-2xl"
+                  className="rounded-xl"
                 />
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* Minimal controls layout */}
+        {/* Controls layout */}
         <div className="flex justify-center items-center space-x-4 mt-8">
           {/* Pagination Dots */}
           <div className="flex items-center space-x-3">
             {features.map((_, i) => (
-              // MODIFIED: Wrapped dot in a button with onClick
               <button
                 key={i}
                 onClick={() => jumpToPage(i)}
@@ -165,9 +164,9 @@ export default function FeaturesSection() {
             }
           >
             {isPlaying ? (
-              <Pause className="h-3 w-3" />
+              <Pause className="h-5 w-5" />
             ) : (
-              <Play className="h-3 w-3" />
+              <Play className="h-5 w-5" />
             )}
           </button>
         </div>
@@ -175,3 +174,4 @@ export default function FeaturesSection() {
     </section>
   );
 }
+
