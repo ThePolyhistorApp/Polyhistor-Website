@@ -21,14 +21,8 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
     try {
       // Axios automatically stringifies objects when Content-Type is JSON
       const response = await axios.post(
-        "https://polyhistor-app.azurewebsites.net/api/waitlist/join",
-        { email, isBetaTester },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          withCredentials: true,
-        }
+        "https://polyhistor-backend-do6y.onrender.com/api/waitlist/join",
+        { email, isBetaTester }
       );
 
       setStatus("success");
