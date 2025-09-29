@@ -31,9 +31,6 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
         }
       );
 
-      // Axios already parses JSON, so you can access response.data directly
-      console.log("Response:", response.data);
-
       setStatus("success");
       setMessage(
         "Thank you for joining! Please check your email for a confirmation."
@@ -41,8 +38,6 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
       setEmail("");
       setIsBetaTester(false);
     } catch (error: any) {
-      console.error("Error:", error);
-
       // Axios errors have a different shape than fetch errors
       const errorMessage =
         error.response?.data?.message ||
