@@ -19,13 +19,22 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
 
     try {
       const response = await fetch(
-        "https://polyhistor-app.azurewebsites.net/api/waitlist/join",
+        "http://polyhistor-app.azurewebsites.net/api/waitlist/join",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, isBetaTester }),
         }
       );
+      // const response = await axios.post(
+      //   "https://polyhistor-app.azurewebsites.net/api/waitlist/join",
+      //   JSON.stringify({ email, isBetaTester }),
+      //   {
+      //     headers: { "Content-Type": "application/json" },
+      //   }
+      // );
+
+      console.log("RESPONSE ", response);
 
       const data = await response.json();
 
@@ -80,6 +89,7 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
+                  disabled={true}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-brand-coral focus:outline-none"
                 />
               </div>
@@ -87,6 +97,7 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
                 <input
                   id="beta-tester"
                   type="checkbox"
+                  disabled={true}
                   checked={isBetaTester}
                   onChange={(e) => setIsBetaTester(e.target.checked)}
                   className="h-4 w-4 rounded border-gray-300 text-brand-coral focus:ring-brand-coral"
@@ -100,10 +111,12 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
               </div>
               <button
                 type="submit"
-                disabled={status === "loading"}
+                // disabled={status === "loading"}
+                disabled={true}
                 className="w-full bg-brand-coral text-white font-bold py-3 px-4 rounded-lg shadow-md hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {status === "loading" ? "Submitting..." : "Get Early Access"}
+                {/* {status === "loading" ? "Submitting..." : "Get Early Access"} */}
+                We are fixing something crazy. Stay tuned for updates.
               </button>
             </form>
             {status === "error" && (
