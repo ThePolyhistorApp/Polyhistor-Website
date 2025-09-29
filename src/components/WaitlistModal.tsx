@@ -19,7 +19,7 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
 
     try {
       const response = await fetch(
-        "https://polyhistor-backend-u3x9.onrender.com/api/waitlist/join",
+        "https://polyhistor-app.azurewebsites.net/api/waitlist/join",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
