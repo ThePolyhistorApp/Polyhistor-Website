@@ -22,7 +22,7 @@ export default function HeroSection({
             Redefining How the World Travels Together.
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-xl mx-auto md:mx-0">
-            PolyHistor is the Al-powered co-pilot that unifies your group's
+            ThePolyHistor is the Al-powered co-pilot that unifies your group's
             plans, location, and safety into one intelligent app.
           </p>
           <motion.button

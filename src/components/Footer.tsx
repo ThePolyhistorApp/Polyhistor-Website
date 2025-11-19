@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Linkedin, ShieldAlert, X } from "lucide-react";
 import Link from "next/link";
-import { Twitter, Linkedin, Instagram, X, ShieldAlert } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function Footer() {
     const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function Footer() {
                         {/* Brand Column */}
                         <div className="col-span-1 md:col-span-2">
                             <Link href="/" className="text-2xl font-bold text-brand-blue mb-4 block">
-                                PolyHistor
+                                ThePolyHistor
                             </Link>
                             <p className="text-slate-500 max-w-xs">
                                 Coordinated Travel. Confident Safety. The all-in-one platform for modern family logistics.
