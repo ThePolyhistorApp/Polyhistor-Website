@@ -1,7 +1,7 @@
+import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -9,9 +9,9 @@ const manrope = Manrope({
 });
 
 const siteConfig = {
-  title: "PolyHistor | AI-Powered Group Travel Planning & Safety App",
+  title: "ThePolyHistor | AI-Powered Group Travel Planning & Safety App",
   description:
-    "PolyHistor is the all-in-one AI app for group travel, unifying planning, coordination, and proactive safety alerts. Generate custom itineraries instantly.",
+    "ThePolyHistor is the all-in-one AI app for group travel, unifying planning, coordination, and proactive safety alerts. Generate custom itineraries instantly.",
   url: "https://thepolyhistor.com",
 };
 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "group travel",
     "AI travel planner",
     "travel safety",
-    "PolyHistor",
+    "ThePolyHistor",
     "group trip coordination",
     "safety alerts",
   ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: `${siteConfig.url}/social-card.jpg`,
         width: 1200,
         height: 630,
-        alt: "PolyHistor App - AI-Powered Group Travel Planning & Safety",
+        alt: "ThePolyHistor App - AI-Powered Group Travel Planning & Safety",
       },
     ],
   },
@@ -67,14 +67,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "SoftwareApplication",
-              name: "PolyHistor",
+              name: "ThePolyHistor",
               applicationCategory: "TravelApplication",
               operatingSystem: "iOS, Android",
               description:
-                "PolyHistor is an AI-powered mobile app that unifies group travel planning, live coordination, and proactive safety alerts.",
+                "ThePolyHistor is an AI-powered mobile app that unifies group travel planning, live coordination, and proactive safety alerts.",
               author: {
                 "@type": "Organization",
-                name: "PolyHistor",
+                name: "ThePolyHistor",
               },
               offers: {
                 "@type": "Offer",
