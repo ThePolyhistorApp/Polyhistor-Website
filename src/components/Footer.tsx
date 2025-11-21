@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Linkedin, ShieldAlert, X } from "lucide-react";
+import NextImage from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -22,8 +23,14 @@ export default function Footer() {
 
                         {/* Brand Column */}
                         <div className="col-span-1 md:col-span-2">
-                            <Link href="/" className="text-2xl font-bold text-brand-blue mb-4 block">
-                                ThePolyHistor
+                            <Link href="/" className="mb-4 block">
+                                <NextImage
+                                    src="/thepolyhistor-logo.svg"
+                                    alt="ThePolyHistor"
+                                    width={300}
+                                    height={48}
+                                    className="h-12 w-auto"
+                                />
                             </Link>
                             <p className="text-slate-500 max-w-xs">
                                 Coordinated Travel. Confident Safety. The all-in-one platform for modern family logistics.
@@ -102,7 +109,7 @@ export default function Footer() {
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">{legalType}</h3>
                             <p className="text-slate-600 mb-6">
-                                We are currently working with our legal counsel to finalize our compliance documents (including COPPA & GDPR). <br/><br/>
+                                We are currently working with our legal counsel to finalize our compliance documents (including COPPA & GDPR). <br /><br />
                                 <strong>Safety is our #1 priority</strong>, so we aren't launching until these are perfect.
                             </p>
                             <button
