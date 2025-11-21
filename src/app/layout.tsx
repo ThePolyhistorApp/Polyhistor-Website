@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     url: siteConfig.url,
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [
       {
-        url: `${siteConfig.url}/social-card.jpg`,
+        url: "/social-card.png",
         width: 1200,
         height: 630,
         alt: "ThePolyHistor App - AI-Powered Group Travel Planning & Safety",
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/social-card.jpg`],
+    images: ["/social-card.png"],
   },
 };
 
