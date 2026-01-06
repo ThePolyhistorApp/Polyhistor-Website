@@ -2,8 +2,8 @@
 "use client";
 
 import axios from "axios";
-import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle2, Loader2, ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, CheckCircle2, Loader2, X } from "lucide-react";
 import { useState } from "react";
 
 export default function WaitlistModal({ onClose }: { onClose: () => void }) {
@@ -97,7 +97,7 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
                                     Get Early Access
                                 </h2>
                                 <p className="text-slate-500 mb-6 text-sm">
-                                    Join other organized parents and travelers. We are limiting our beta to the first 500 users.
+                                    Join other organized travelers and travel agencies. We are limiting our beta to the first 500 users.
                                 </p>
 
                                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -155,6 +155,16 @@ export default function WaitlistModal({ onClose }: { onClose: () => void }) {
                                         </p>
                                     )}
                                 </form>
+
+                                {/* Contact Info Section */}
+                                <div className="mt-6 pt-6 border-t border-slate-100 text-center">
+                                    <p className="text-sm text-slate-500">
+                                        Have questions or want a custom demo? <br />
+                                        <a href="mailto:contact@thepolyhistor.com" className="text-brand-blue font-bold hover:underline">
+                                            Contact us: info@thepolyhistor.com
+                                        </a>
+                                    </p>
+                                </div>
                             </motion.div>
                         )}
                     </AnimatePresence>

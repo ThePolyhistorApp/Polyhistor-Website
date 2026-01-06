@@ -1,6 +1,7 @@
 export const marqueeItems: string[] = [
-  "Coming Soon",
-  "Join the Waitlist for Early Access",
-  "Safety-First AI Travel Planning",
-  "Your Group's AI Co-Pilot",
+  "Real-Time Liability Protection",
+  "Automated Duty of Care",
+  "Battery-Optimized Fleet Tracking",
+  "White-Label Options Available",
+  "COPPA & FERPA Compliant",
 ];
