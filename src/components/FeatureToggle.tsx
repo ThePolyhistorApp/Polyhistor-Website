@@ -1,144 +1,70 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Shield, Plane, Bell, MapPin, Users, Wallet } from "lucide-react";
+import { motion } from "framer-motion";
+import { Compass, ShieldCheck, Users } from "lucide-react";
 
 export default function FeatureToggle() {
-    const [activeTab, setActiveTab] = useState<"safety" | "travel">("safety");
 
-    const data = {
-        safety: {
-            color: "bg-safety-500",
-            lightColor: "bg-safety-50",
-            textColor: "text-safety-900",
-            title: "For Daily Peace of Mind",
-            subtitle: "Trusted by parents for school commutes and daily routines.",
-            features: [
-                { icon: MapPin, title: "Real-Time Geofencing", desc: "Get alerted when they arrive at school or leave home." },
-                { icon: Shield, title: "Privacy First", desc: "COPPA compliant. We don't sell location data." },
-                { icon: Bell, title: "Smart Alerts", desc: "Proactive notifications without constant checking." },
-            ],
+    const features = [
+        {
+            id: "navigation",
+            icon: Compass,
+            title: "AI-Guided Exploration",
+            desc: "Not just a tracker. Students get turn-by-turn navigation to their next itinerary stop. They never ask 'Where do I go?' again.",
+            visualColor: "bg-brand-coral",
         },
-        travel: {
-            color: "bg-travel-500",
-            lightColor: "bg-travel-50",
-            textColor: "text-travel-900",
-            title: "For Group Adventures",
-            subtitle: "The ultimate tool for the family organizer.",
-            features: [
-                { icon: Plane, title: "AI Itinerary Builder", desc: "Turn messy group chats into a visual plan." },
-                { icon: Wallet, title: "Expense Splitting", desc: "Track who paid for dinner without the awkwardness." },
-                { icon: Users, title: "Group Location", desc: "Find your friends easily in crowded theme parks." },
-            ],
+        {
+            id: "social",
+            icon: Users,
+            title: "Social Group Locator",
+            desc: "Travelers can find their friends on the map instantly. It’s fun for them, and keeps the group together for you.",
+            visualColor: "bg-brand-blue",
         },
-    };
-
-    const content = data[activeTab];
+        {
+            id: "liability",
+            icon: ShieldCheck,
+            title: "Automated Liability Logs",
+            desc: "Every check-in is timestamped. If an incident occurs, you have a digital audit trail ready for insurance.",
+            visualColor: "bg-safety-500",
+        },
+    ];
 
     return (
         <section className="py-24 bg-slate-50" id="features">
             <div className="container mx-auto px-4">
 
-                {/* The Toggle Switch */}
-                <div className="flex justify-center mb-12 px-4 w-full"> {/* Added px-4 and w-full */}
-                    <div className="bg-white p-1 rounded-full shadow-sm border border-slate-200 flex relative w-full max-w-[300px]"> {/* Added max-w constraint */}
-                        {/* Sliding Background */}
-                        <motion.div
-                            layout
-                            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                            className={`absolute top-1 bottom-1 rounded-full w-1/2 ${ // Changed w-[140px] to w-1/2
-                                activeTab === "safety" ? "left-1 bg-safety-500" : "left-[50%] bg-travel-500" // Adjusted positioning
-                            }`}
-                        />
-
-                        <button
-                            onClick={() => setActiveTab("safety")}
-                            className={`relative z-10 w-1/2 py-3 rounded-full text-sm font-bold transition-colors ${ // Changed fixed width to w-1/2
-                                activeTab === "safety" ? "text-white" : "text-slate-500 hover:text-slate-900"
-                            }`}
-                        >
-                            Daily Safety
-                        </button>
-                        <button
-                            onClick={() => setActiveTab("travel")}
-                            className={`relative z-10 w-1/2 py-3 rounded-full text-sm font-bold transition-colors ${ // Changed fixed width to w-1/2
-                                activeTab === "travel" ? "text-white" : "text-slate-500 hover:text-slate-900"
-                            }`}
-                        >
-                            Group Travel
-                        </button>
-                    </div>
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        Traveler Perks that Serve <br />
+                        <span className="text-brand-blue">Agency Safety.</span>
+                    </h2>
+                    <p className="text-lg text-slate-600">
+                        The "Trojan Horse" strategy: Give students tools they love, and get the compliance you need.
+                    </p>
                 </div>
 
-                {/* Animated Content Card */}
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeTab}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.4 }}
-                        className="max-w-5xl mx-auto"
-                    >
-                        <div className={`rounded-3xl overflow-hidden shadow-2xl bg-white flex flex-col md:flex-row`}>
-
-                            {/* Left Side: Text Content */}
-                            <div className="p-8 md:p-12 md:w-1/2 flex flex-col justify-center">
-                                <h3 className={`text-3xl font-bold mb-4 ${content.textColor}`}>
-                                    {content.title}
-                                </h3>
-                                <p className="text-slate-600 mb-8 text-lg">
-                                    {content.subtitle}
-                                </p>
-                                <div className="space-y-6">
-                                    {content.features.map((feat, i) => (
-                                        <div key={i} className="flex items-start">
-                                            <div className={`p-3 rounded-xl mr-4 ${content.lightColor}`}>
-                                                <feat.icon className={`w-6 h-6 ${activeTab === "safety" ? "text-safety-500" : "text-travel-500"}`} />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold text-slate-900">{feat.title}</h4>
-                                                <p className="text-sm text-slate-500 mt-1">{feat.desc}</p>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {features.map((feat, i) => (
+                        <motion.div
+                            key={feat.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.2, duration: 0.5 }}
+                            className="bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 hover:shadow-xl hover:border-slate-200 transition-all"
+                        >
+                            <div className={`w-14 h-14 ${feat.visualColor} bg-opacity-10 rounded-2xl flex items-center justify-center mb-6`}>
+                                <feat.icon className={`w-7 h-7 ${feat.visualColor.replace('bg-', 'text-')}`} />
                             </div>
-
-                            {/* Right Side: Abstract Visualization (Code-based) */}
-                            <div className={`md:w-1/2 p-8 md:p-12 flex items-center justify-center ${content.lightColor}`}>
-                                {/* This replaces the screenshot.
-                    It's an abstract representation of the feature using CSS/Divs.
-                 */}
-                                <div className="relative w-64 h-80 bg-white rounded-3xl shadow-lg border border-white/50 p-4 flex flex-col">
-                                    {/* Abstract Header */}
-                                    <div className="h-8 w-full bg-slate-100 rounded-lg mb-4 animate-pulse"></div>
-                                    {/* Abstract Map/List */}
-                                    <div className={`flex-1 rounded-xl ${activeTab === 'safety' ? 'bg-safety-100' : 'bg-travel-100'} relative overflow-hidden`}>
-                                        {activeTab === 'safety' ? (
-                                            // Safety Abstract Vis: Pulsing Radar
-                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                <div className="w-32 h-32 bg-safety-500/20 rounded-full animate-ping absolute"></div>
-                                                <div className="w-4 h-4 bg-safety-500 rounded-full relative z-10 ring-4 ring-white"></div>
-                                            </div>
-                                        ) : (
-                                            // Travel Abstract Vis: Connecting Line
-                                            <div className="absolute inset-0 p-4 flex flex-col justify-between">
-                                                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-travel-500"></div><div className="h-2 w-20 bg-travel-200 rounded"></div></div>
-                                                <div className="w-0.5 h-full bg-travel-200 ml-1.5 my-1"></div>
-                                                <div className="flex items-center gap-2"><div className="w-3 h-3 rounded-full bg-travel-500"></div><div className="h-2 w-24 bg-travel-200 rounded"></div></div>
-                                            </div>
-                                        )}
-                                    </div>
-                                    {/* Abstract Bottom Action */}
-                                    <div className="h-10 w-full bg-slate-900 rounded-xl mt-4 opacity-10"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </motion.div>
-                </AnimatePresence>
+                            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                                {feat.title}
+                            </h3>
+                            <p className="text-slate-600 leading-relaxed">
+                                {feat.desc}
+                            </p>
+                        </motion.div>
+                    ))}
+                </div>
 
             </div>
         </section>

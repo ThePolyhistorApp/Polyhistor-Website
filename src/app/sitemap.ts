@@ -1,20 +1,14 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from 'next';
+
+const baseUrl = 'https://thepolyhistor.com';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://thepolyhistor.com'
-  
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ]
+    }
+  ];
 }

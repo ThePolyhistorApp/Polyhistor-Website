@@ -1,29 +1,22 @@
 "use client";
 
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useModal } from "@/context/ModalContext";
 
 // Components
-import MarqueeBanner from "@/components/MarqueeBanner";
-import Hero from "@/components/Hero";
-import ProblemSection from "@/components/ProblemSection";
-import FeatureToggle from "@/components/FeatureToggle";
-import PrivacySection from "@/components/PrivacySection"; // NEW
-import FAQSection from "@/components/FAQSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer"; // NEW
-import WaitlistModal from "@/components/WaitlistModal";
+import FAQSection from "@/components/FAQSection";
+import FeatureToggle from "@/components/FeatureToggle";
+import Hero from "@/components/Hero";
+import PrivacySection from "@/components/PrivacySection";
+import ProblemSection from "@/components/ProblemSection";
+
 
 export default function HomePageClient() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    const { openModal } = useModal();
 
     return (
         <>
             <main className="antialiased font-sans text-slate-900">
-                <MarqueeBanner />
 
                 <Hero onJoinWaitlistClick={openModal} />
 
@@ -42,10 +35,6 @@ export default function HomePageClient() {
                 {/* Final Call to Action */}
                 <CTASection onJoinWaitlistClick={openModal} />
             </main>
-            
-            <AnimatePresence>
-                {isModalOpen && <WaitlistModal onClose={closeModal} />}
-            </AnimatePresence>
         </>
     );
 }

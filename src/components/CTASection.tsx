@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 export default function CTASection({
-                                       onJoinWaitlistClick,
-                                   }: {
+    onJoinWaitlistClick,
+}: {
     onJoinWaitlistClick: () => void;
 }) {
     return (
@@ -27,19 +27,25 @@ export default function CTASection({
                             transition={{ duration: 0.6 }}
                         >
                             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                                Ready to travel smarter?
+                                Ready to upgrade your tours?
                             </h2>
                             <p className="text-lg text-blue-100 max-w-xl mx-auto mb-10">
-                                Join thousands of parents and travelers on the waitlist.
-                                Secure your family's peace of mind today.
+                                Join 85+ organizers on the waitlist building the future of safe travel.
                             </p>
 
-                            <button
-                                onClick={onJoinWaitlistClick}
-                                className="inline-flex items-center px-8 py-4 bg-white text-brand-blue text-lg font-bold rounded-full hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                            >
-                                Join the Waitlist <ArrowRight className="ml-2 w-5 h-5" />
-                            </button>
+                            <div className="flex flex-col items-center gap-4">
+                                <button
+                                    onClick={onJoinWaitlistClick}
+                                    className="inline-flex items-center px-8 py-4 bg-white text-brand-blue text-lg font-bold rounded-full hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                                >
+                                    Partner with Us <ArrowRight className="ml-2 w-5 h-5" />
+                                </button>
+                                <button
+                                    className="text-white/80 hover:text-white text-sm font-medium underline-offset-4 hover:underline transition-all"
+                                >
+                                    Are you a traveler? Download the Beta here.
+                                </button>
+                            </div>
                         </motion.div>
                     </div>
                 </div>

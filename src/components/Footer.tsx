@@ -32,8 +32,11 @@ export default function Footer() {
                                     className="h-12 w-auto"
                                 />
                             </Link>
-                            <p className="text-slate-500 max-w-xs">
-                                Coordinated Travel. Confident Safety. The all-in-one platform for modern family logistics.
+                            <p className="text-slate-500 max-w-xs mb-4">
+                                Trusted by Modern Student Tour Agencies.
+                            </p>
+                            <p className="text-slate-400 text-sm">
+                                Join 85+ organizers on the waitlist building the future of safe travel.
                             </p>
                         </div>
 
