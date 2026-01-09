@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: "ThePolyHistor",
     images: [
       {
-        url: "/social-card.png",
+        url: "/social-card.png?v=2",
         width: 1200,
         height: 630,
         alt: "ThePolyHistor App - Agency Dashboard & Mobile App",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     creator: "@ThePolyHistor",
-    images: [`${siteConfig.url}/social-card.png`],
+    images: [`${siteConfig.url}/social-card.png?v=2`],
   },
   robots: {
     index: true,
