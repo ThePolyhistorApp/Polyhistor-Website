@@ -61,8 +61,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/social-card.png"],
     creator: "@ThePolyHistor",
+    images: [`${siteConfig.url}/social-card.png`],
   },
   robots: {
     index: true,
