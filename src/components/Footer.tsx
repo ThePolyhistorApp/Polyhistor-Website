@@ -1,19 +1,10 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { Linkedin, ShieldAlert, X } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import NextImage from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Footer() {
-    const [isLegalModalOpen, setIsLegalModalOpen] = useState(false);
-    const [legalType, setLegalType] = useState("");
-
-    const openLegal = (type: string) => {
-        setLegalType(type);
-        setIsLegalModalOpen(true);
-    };
 
     return (
         <>
@@ -58,14 +49,22 @@ export default function Footer() {
                                     <Link href="/about" className="hover:text-brand-blue">About Us</Link>
                                 </li>
                                 <li>
-                                    <button onClick={() => openLegal("Privacy Policy")} className="hover:text-brand-blue text-left">
-                                        Privacy Policy
-                                    </button>
+                                    <Link href="/contact" className="hover:text-brand-blue">Contact Us</Link>
                                 </li>
                                 <li>
-                                    <button onClick={() => openLegal("Terms of Service")} className="hover:text-brand-blue text-left">
+                                    <Link href="/privacy-policy" className="hover:text-brand-blue">
+                                        Privacy Policy
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/terms-of-service" className="hover:text-brand-blue">
                                         Terms of Service
-                                    </button>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/eula" className="hover:text-brand-blue">
+                                        EULA
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -90,41 +89,6 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-
-            {/* The "Coming Soon" Modal for Legal Docs */}
-            <AnimatePresence>
-                {isLegalModalOpen && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-                        <motion.div
-                            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-                            onClick={() => setIsLegalModalOpen(false)}
-                            className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
-                        />
-                        <motion.div
-                            initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }}
-                            className="relative bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center"
-                        >
-                            <button onClick={() => setIsLegalModalOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
-                                <X size={20} />
-                            </button>
-                            <div className="w-12 h-12 bg-safety-50 text-safety-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <ShieldAlert size={24} />
-                            </div>
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">{legalType}</h3>
-                            <p className="text-slate-600 mb-6">
-                                We are currently working with our legal counsel to finalize our compliance documents (including COPPA & GDPR). <br /><br />
-                                <strong>Safety is our #1 priority</strong>, so we aren't launching until these are perfect.
-                            </p>
-                            <button
-                                onClick={() => setIsLegalModalOpen(false)}
-                                className="px-6 py-2 bg-slate-900 text-white rounded-lg font-bold text-sm hover:bg-slate-800"
-                            >
-                                Understood
-                            </button>
-                        </motion.div>
-                    </div>
-                )}
-            </AnimatePresence>
         </>
     );
 }
