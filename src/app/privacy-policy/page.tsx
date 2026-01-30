@@ -1,127 +1,107 @@
 
-
 export default function PrivacyPolicy() {
   return (
     <main className="container mx-auto px-4 pt-32 pb-16 min-h-[60vh]">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-2 text-slate-900">Privacy Policy</h1>
-        <p className="text-slate-500 mb-8">Last Updated: January 19, 2026</p>
+        <p className="text-slate-500 mb-8">Last Updated: January 30, 2026</p>
 
         <div className="prose prose-slate max-w-none text-slate-700">
           <p className="mb-6">
-            ThePolyhistor LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy and is committed to protecting it through our compliance with this policy. This Privacy Policy describes the types of information we may collect from you or that you may provide when you use the ThePolyhistor mobile application (the &quot;App&quot;) and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+            ThePolyhistor LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy. This policy describes how we collect, use, and protect your information when you use the ThePolyhistor mobile application.
           </p>
 
           {/* 1. Information We Collect */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Information We Collect</h2>
-            <p className="mb-4">We collect several types of information from and about users of our App, including:</p>
 
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">A. Information You Provide to Us</h3>
+            <h3 className="text-xl font-semibold text-slate-800 mb-2">A. Information You Provide</h3>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Account Information:</strong> When you register, we collect your name, email address, date of birth, and password.</li>
-              <li><strong>User Content:</strong> Information you post to the App, including profile photos, trip itineraries, and messages sent to other users or groups.</li>
-              <li><strong>Correspondence:</strong> Records and copies of your correspondence (including email addresses) if you contact us for support.</li>
+              <li><strong>Account Data:</strong> Name, email, username, password, and profile details (bio, gender, hometown).</li>
+              <li><strong>Trip Data:</strong> Itineraries, budgets, dates, and invited friends.</li>
+              <li><strong>User Content:</strong> Photos, chat messages, and reviews.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold text-slate-800 mb-2">B. Information We Collect Automatically</h3>
+            <h3 className="text-xl font-semibold text-slate-800 mb-2">B. Information Collected Automatically</h3>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Real-Time Location Data:</strong> The App requires access to your device&apos;s location to provide core features, such as navigation, route planning, and &quot;active friends&quot; visibility.</li>
-              <li><strong>Note:</strong> While we process this data in real-time to provide the service, we do not continuously store your historical location movements by default. We may introduce features in the future that allow you to voluntarily save location history (e.g., &quot;Trip Journals&quot;), which will be stored only with your explicit permission.</li>
-              <li><strong>Device Information:</strong> We collect information about your mobile device and internet connection, including the device&apos;s unique device identifier, IP address, operating system, and browser type.</li>
-              <li><strong>Usage Details:</strong> Details of your access to and use of the App, including traffic data, logs, and other communication data and the resources that you access and use on the App.</li>
+              <li><strong>Location Data:</strong> We collect precise real-time location to enable navigation and &quot;Live Tracking&quot; features.</li>
+              <li><strong>Navigation History:</strong> Details of your trips (Origin, Destination, Waypoints) are processed to provide routing.</li>
+              <li><strong>Device & Analytics:</strong> IP address, device model, and usage logs to improve the App.</li>
             </ul>
           </section>
 
-          {/* 2. How We Use Your Information */}
+          {/* 2. Artificial Intelligence (AI) Processing */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">2. How We Use Your Information</h2>
-            <p className="mb-4">We use information that we collect about you or that you provide to us:</p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">2. Artificial Intelligence (AI) Processing</h2>
+            <p className="mb-4">We use AI technologies (including Google Gemini) to provide travel recommendations.</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>To present our App and its contents to you.</li>
-              <li>To provide you with information, products, or services that you request from us (e.g., generating travel itineraries).</li>
-              <li>To fulfill our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection.</li>
-              <li>To notify you about changes to our App or any products or services we offer or provide though it.</li>
-              <li>To allow you to participate in interactive features on our App, such as group trips and shared navigation.</li>
-              <li>To improve our App, verify accounts, and maintain security.</li>
+              <li><strong>Embeddings:</strong> We may process your preferences and past trips to create &quot;embeddings&quot; (mathematical representations) that help our AI understand your travel style.</li>
+              <li><strong>Processing:</strong> Anonymized query data may be sent to our AI partners to generate itinerary responses.</li>
             </ul>
           </section>
 
-          {/* 3. Disclosure of Your Information */}
+          {/* 3. How We Use Your Information */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">3. Disclosure of Your Information</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">3. How We Use Your Information</h2>
+            <p className="mb-4">We use your data to:</p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li>Provide travel navigation and itinerary planning.</li>
+              <li>Facilitate social features (group chats, friend location sharing).</li>
+              <li>Connect you with Travel Agencies (if you accept an Agency invite).</li>
+              <li>Enforce our safety and moderation policies.</li>
+            </ul>
+          </section>
+
+          {/* 4. Sharing of Information */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Sharing of Information</h2>
+            <p className="mb-4">We do not sell your personal data. We share data only as follows:</p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>With Travel Agencies:</strong> If you join an &quot;Agency Trip,&quot; that specific Agency will have access to your profile and real-time location during that trip.</li>
+              <li><strong>Service Providers:</strong> We use third-party vendors for hosting (AWS, Supabase), maps (Mapbox, Google Places), AI (Google), and communication (Resend, Firebase).</li>
+              <li><strong>Legal Compliance:</strong> We may disclose information if required by law or to protect user safety (e.g., in response to a court order).</li>
+            </ul>
+          </section>
+
+          {/* 5. Data Retention & Deletion */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Data Retention & Deletion</h2>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Account Data:</strong> Retained until you request account deletion.</li>
+              <li><strong>Chat Messages (Auto-Purge):</strong> To protect privacy, deleted messages are removed from view immediately. We retain message backups for safety auditing for a maximum of 90 days before permanent erasure.</li>
+              <li><strong>Location History:</strong> Retained to provide your personal travel history unless you manually delete specific trips.</li>
+            </ul>
+          </section>
+
+          {/* 6. Data Security */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Data Security</h2>
             <p className="mb-4">
-              We do not sell your personal information. We may disclose aggregated information about our users (which does not identify any individual) without restriction. We may disclose personal information that we collect or you provide as described in this privacy policy:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li>
-                <strong>To Our Service Providers:</strong> We use third-party contractors to support our business. These partners are authorized to use your personal information only as necessary to provide these services to us. These include:
-                <ul className="list-[circle] pl-6 mt-2 space-y-1">
-                  <li>Hosting & Database: AWS (Amazon Web Services), Supabase.</li>
-                  <li>Mapping & Navigation: Mapbox, Google Places API.</li>
-                  <li>Analytics: PostHog.</li>
-                  <li>Notifications & Communication: Firebase, Resend.</li>
-                  <li>Weather Services: OpenMeteo.</li>
-                </ul>
-              </li>
-              <li><strong>To Comply with the Law:</strong> If we are required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).</li>
-              <li><strong>Business Transfers:</strong> In connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
-            </ul>
-          </section>
-
-          {/* 4. Data Security */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Data Security</h2>
-            <p className="mb-4">We have implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration, and disclosure.</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Encryption:</strong> Sensitive data is encrypted while at rest in our databases using industry-standard encryption protocols.</li>
-              <li><strong>Access Control:</strong> Access to your data is restricted to authorized employees and contractors who need to know that information in order to operate, develop, or improve our Service.</li>
-            </ul>
-            <p className="text-sm italic bg-yellow-50 p-4 border-l-4 border-yellow-400 text-yellow-800">
-              <strong>Disclaimer:</strong> Unfortunately, the transmission of information via the internet is not completely secure. Although we do our best to protect your personal information, we cannot guarantee the security of your personal information transmitted to our App. Any transmission of personal information is at your own risk.
+              We implement robust security measures, including Encryption-at-Rest for sensitive message data. However, no transmission over the internet is 100% secure, and we cannot guarantee absolute security.
             </p>
           </section>
 
-          {/* 5. Children Under the Age of 13 */}
+          {/* 7. Children’s Privacy */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Children Under the Age of 13</h2>
-            <p>
-              Our App is strictly intended for users who are 13 years of age or older. We do not knowingly collect personal information from children under 13. If you are under 13, do not use or provide any information on this App. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please contact us at <a href="mailto:apps@thepolyhistor.com" className="text-brand-blue hover:underline">apps@thepolyhistor.com</a>.
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Children’s Privacy</h2>
+            <p className="mb-4">
+              The App is strictly for users 13 years of age or older. We do not knowingly collect personal information from children under 13.
             </p>
           </section>
 
-
-          {/* 6. Your State Privacy Rights (Illinois) */}
+          {/* 8. Your Illinois Privacy Rights */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Your State Privacy Rights (Illinois)</h2>
-            <p className="mb-4">If you are a resident of Illinois, you may have specific rights regarding your personal information.</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Biometric Data:</strong> We do not currently collect or store biometric identifiers or biometric information (such as face scans or fingerprints) as defined by the Illinois Biometric Information Privacy Act (BIPA).</li>
-              <li><strong>Consumer Fraud:</strong> We comply with the Illinois Consumer Fraud and Deceptive Business Practices Act regarding the collection and use of your data.</li>
-            </ul>
-          </section>
-
-          {/* 7. Account Deletion */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Account Deletion</h2>
-            <p>
-              You may request to delete your account at any time. Upon deletion, your personal profile data will be removed from our active databases. However, we may retain certain information in our archives as required by law or for legitimate business purposes (such as fraud prevention or resolving disputes). To request deletion, please contact us at <a href="mailto:apps@thepolyhistor.com" className="text-brand-blue hover:underline">apps@thepolyhistor.com</a>.
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Your Illinois Privacy Rights</h2>
+            <p className="mb-4">
+              If you are an Illinois resident, you have specific rights regarding your data. We do not currently collect &quot;Biometric Information&quot; (like face scans) as defined by the Illinois Biometric Information Privacy Act (BIPA).
             </p>
           </section>
 
-          {/* 8. Changes to Our Privacy Policy */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Changes to Our Privacy Policy</h2>
-            <p>
-              It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users&apos; personal information, we will notify you through an in-app alert or via email. The date the privacy policy was last revised is identified at the top of the page.
-            </p>
-          </section>
-
-          {/* 9. Contact Information */}
+          {/* 9. Contact Us */}
           <section className="mb-8 border-t border-slate-200 pt-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Contact Information</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Contact Us</h2>
             <p>
-              To ask questions or comment about this privacy policy and our privacy practices, contact us at: ThePolyhistor LLC <br /> Email: <a href="mailto:apps@thepolyhistor.com" className="text-brand-blue hover:underline">apps@thepolyhistor.com</a>
+              For questions about this policy or to request account deletion, contact: ThePolyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
             </p>
           </section>
 

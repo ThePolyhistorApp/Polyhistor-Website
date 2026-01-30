@@ -1,11 +1,10 @@
 
-
 export default function EULA() {
   return (
     <main className="container mx-auto px-4 pt-32 pb-16 min-h-[60vh]">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-2 text-slate-900">End User License Agreement (EULA)</h1>
-        <p className="text-slate-500 mb-8">Last Updated: January 19, 2026</p>
+        <p className="text-slate-500 mb-8">Last Updated: January 30, 2026</p>
 
         <div className="prose prose-slate max-w-none text-slate-700">
           <p className="mb-6">
@@ -23,62 +22,83 @@ export default function EULA() {
             </p>
           </section>
 
-          {/* 2. User Generated Content & Objectionable Content (Zero Tolerance) */}
+          {/* 2. User Generated Content & Moderation (Zero Tolerance) */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">2. User Generated Content & Objectionable Content (Zero Tolerance)</h2>
-            <p className="mb-4">The App allows users to post content, message groups, and share itineraries. To ensure a safe community, we have a Zero Tolerance Policy for objectionable content.</p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">2. User Generated Content & Moderation (Zero Tolerance)</h2>
+            <p className="mb-4">The App includes interactive features that allow users to post content, message groups, and share itineraries. To ensure a safe community, we enforce a strict Zero Tolerance Policy for objectionable content.</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>Prohibited Content:</strong> You may not upload, share, or transmit content that is offensive, defamatory, pornographic, hateful, discriminatory, or promotes illegal acts.</li>
-              <li><strong>Reporting & Blocking:</strong> Users can report abusive content or block other users directly within the App.</li>
-              <li><strong>Action:</strong> ThePolyhistor LLC will act on reported content within 24 hours. We reserve the right to remove any content and immediately terminate the account of any user found violating these standards without prior notice.</li>
+              <li><strong>Reporting & Blocking:</strong> You agree to use the provided in-app tools to Report inappropriate content or Block abusive users.</li>
+              <li><strong>Enforcement:</strong> ThePolyhistor LLC will review reported content within 24 hours. We reserve the right to remove any content and immediately terminate the account of any user found violating these standards without prior notice.</li>
             </ul>
           </section>
 
-          {/* 3. Location Data & Safety */}
+          {/* 3. Artificial Intelligence (AI) Disclaimer */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">3. Location Data & Safety</h2>
-            <p className="mb-4">The App provides location-based services for navigation and social coordination.</p>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">3. Artificial Intelligence (AI) Disclaimer</h2>
+            <p className="mb-4">The App utilizes artificial intelligence technologies (including Google Gemini) to generate travel recommendations and itineraries.</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Voluntary Sharing:</strong> You acknowledge that sharing your location with other users is a voluntary action at your own risk.</li>
-              <li><strong>Safety:</strong> Do not use the App in a way that distracts you from obeying traffic or safety laws. ThePolyhistor LLC is not liable for any accidents, injuries, or damages resulting from your use of the App while operating a vehicle or walking.</li>
+              <li><strong>No Warranty of Accuracy:</strong> AI-generated content may contain errors, &quot;hallucinations,&quot; or outdated information regarding opening hours, prices, or locations.</li>
+              <li><strong>User Responsibility:</strong> You acknowledge that you must independently verify all AI-generated suggestions before relying on them. ThePolyhistor LLC is not liable for any missed flights, closed venues, or financial losses resulting from AI errors.</li>
             </ul>
           </section>
 
-          {/* 4. Updates and Maintenance */}
+          {/* 4. Location Services & Navigation */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Updates and Maintenance</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">4. Location Services & Navigation</h2>
+            <p className="mb-4">The App provides real-time navigation and location-sharing features.</p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Safety:</strong> You agree not to use the App in a manner that distracts you from obeying traffic or safety laws.</li>
+              <li><strong>Data Accuracy:</strong> Navigation data is for planning purposes only. Actual road conditions may vary.</li>
+              <li><strong>Battery Usage:</strong> Continued use of GPS running in the background can dramatically decrease battery life.</li>
+            </ul>
+          </section>
+
+          {/* 5. Third-Party Agencies */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Third-Party Agencies</h2>
+            <p className="mb-4">If you use the App to participate in a trip organized by a third-party Travel Agency (&quot;Agency&quot;):</p>
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li><strong>Relationship:</strong> The Agency is independent of ThePolyhistor LLC. We provide the technology platform but do not control the Agency&apos;s operations or decisions.</li>
+              <li><strong>Data Sharing:</strong> You acknowledge that the Agency may have access to your location and trip progress during active Agency trips.</li>
+            </ul>
+          </section>
+
+          {/* 6. Updates and Maintenance */}
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Updates and Maintenance</h2>
             <p>
               ThePolyhistor LLC may generally provide updates to the App but is under no obligation to provide support or maintenance. You acknowledge that Apple and Google have no obligation whatsoever to furnish any maintenance and support services with respect to the App.
             </p>
           </section>
 
-          {/* 5. External Services */}
+          {/* 7. External Services */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">5. External Services</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">7. External Services</h2>
             <p>
-              The App enables access to third-party services (e.g., Maps, Weather). Use of these services is at your sole risk. We are not responsible for the content or accuracy of any third-party service.
+              The App enables access to third-party services (e.g., Mapbox, Google Places, OpenMeteo). Use of these services is at your sole risk. We are not responsible for the content or accuracy of any third-party service.
             </p>
           </section>
 
-          {/* 6. No Warranty */}
+          {/* 8. No Warranty */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">6. No Warranty</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">8. No Warranty</h2>
             <p className="uppercase text-sm leading-relaxed">
               THE APP IS PROVIDED &quot;AS IS&quot; AND &quot;AS AVAILABLE.&quot; TO THE MAXIMUM EXTENT PERMITTED BY LAW, THEPOLYHISTOR LLC DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT WARRANT THAT THE APP WILL BE ERROR-FREE OR UNINTERRUPTED.
             </p>
           </section>
 
-          {/* 7. Limitation of Liability */}
+          {/* 9. Limitation of Liability */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">7. Limitation of Liability</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Limitation of Liability</h2>
             <p className="uppercase text-sm leading-relaxed">
-              TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL THEPOLYHISTOR LLC BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING LOSS OF PROFITS OR DATA, ARISING OUT OF YOUR USE OR INABILITY TO USE THE APP.
+              TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT SHALL THEPOLYHISTOR LLC BE LIABLE FOR PERSONAL INJURY, OR ANY INCIDENTAL, SPECIAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF YOUR USE OR INABILITY TO USE THE APP.
             </p>
           </section>
 
-          {/* 8. Specific Terms for Apple iOS Users */}
+          {/* 10. Specific Terms for Apple iOS Users */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">8. Specific Terms for Apple iOS Users</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Specific Terms for Apple iOS Users</h2>
             <p className="mb-4">If you downloaded the App from the Apple App Store, you acknowledge and agree that:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>Parties:</strong> This Agreement is between You and ThePolyhistor LLC only, not Apple. Apple is not responsible for the App or its content.</li>
@@ -88,19 +108,19 @@ export default function EULA() {
             </ul>
           </section>
 
-          {/* 9. Legal Compliance */}
+          {/* 11. Legal Compliance */}
           <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Legal Compliance</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">11. Legal Compliance</h2>
             <p>
               You represent and warrant that: (i) You are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a &quot;terrorist supporting&quot; country; and (ii) You are not listed on any U.S. Government list of prohibited or restricted parties.
             </p>
           </section>
 
-          {/* 10. Contact Information */}
+          {/* 12. Contact Information */}
           <section className="mb-8 border-t border-slate-200 pt-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Contact Information</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Contact Information</h2>
             <p>
-              If you have any questions, complaints, or claims with respect to the App, please contact us at: ThePolyhistor LLC <br /> Email: <a href="mailto:apps@thepolyhistor.com" className="text-brand-blue hover:underline">apps@thepolyhistor.com</a>
+              If you have any questions, complaints, or claims with respect to the App, please contact us at: ThePolyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
             </p>
           </section>
 

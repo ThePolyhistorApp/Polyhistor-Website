@@ -24,10 +24,10 @@ export default function ContactPage() {
               For general inquiries, support, or legal questions.
             </p>
             <a
-              href="mailto:apps@thepolyhistor.com"
+              href="mailto:legal@thepolyhistor.com"
               className="text-brand-blue font-semibold hover:underline"
             >
-              apps@thepolyhistor.com
+              legal@thepolyhistor.com
             </a>
           </div>
 
