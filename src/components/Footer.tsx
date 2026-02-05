@@ -113,7 +113,7 @@ export default function Footer() {
                         {/* Social Links */}
                         <div className="flex items-center gap-6">
                             <a
-                                href="https://twitter.com/thepolyhistor"
+                                href="https://x.com/polyhistor_app"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-viral-red transition-colors"
@@ -131,7 +131,7 @@ export default function Footer() {
                                 <Linkedin size={20} />
                             </a>
                             <a
-                                href="https://instagram.com/thepolyhistor"
+                                href="https://instagram.com/polyhistorapp"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-viral-purple transition-colors"

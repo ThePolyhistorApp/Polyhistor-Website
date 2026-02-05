@@ -55,7 +55,7 @@ export default function ContactPage() {
         <div className="mt-16 bg-slate-50 rounded-2xl p-8 border border-slate-200">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Ready to modernize your agency?</h2>
           <p className="text-slate-600 mb-6">
-            Join 85+ organizers on the waitlist building the future of safe travel.
+            Join 90+ organizers on the waitlist building the future of safe travel.
           </p>
           <Link
             href="/"
