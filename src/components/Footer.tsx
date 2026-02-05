@@ -1,94 +1,148 @@
 "use client";
 
-import { Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 import NextImage from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
-
     return (
-        <>
-            <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8 mt-auto">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <footer className="bg-gradient-to-b from-white to-slate-50 border-t border-slate-200 pt-16 pb-8 mt-auto">
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                    {/* Brand Column */}
+                    <div className="col-span-1 md:col-span-2">
+                        <Link href="/" className="mb-6 block">
+                            <NextImage
+                                src="/full-logo.png"
+                                alt="Polyhistor"
+                                width={250}
+                                height={50}
+                                className="h-12 w-auto"
+                            />
+                        </Link>
+                        <p className="text-slate-600 max-w-md mb-6 font-medium">
+                            Never lose your friends (or your money) again. Group travel made simple for Gen Z travelers.
+                        </p>
 
-                        {/* Brand Column */}
-                        <div className="col-span-1 md:col-span-2">
-                            <Link href="/" className="mb-4 block">
-                                <NextImage
-                                    src="/thepolyhistor-logo.svg"
-                                    alt="ThePolyHistor"
-                                    width={300}
-                                    height={48}
-                                    className="h-12 w-auto"
-                                />
-                            </Link>
-                            <p className="text-slate-500 max-w-xs mb-4">
-                                Trusted by Modern Student Tour Agencies.
-                            </p>
-                            <p className="text-slate-400 text-sm">
-                                Join 85+ organizers on the waitlist building the future of safe travel.
-                            </p>
+                        {/* Pre-launch Stats */}
+                        <div className="flex flex-wrap gap-6 mb-6">
+                            <div>
+                                <p className="text-2xl font-bold text-viral-red">90+</p>
+                                <p className="text-sm text-slate-500">On Waitlist</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-viral-purple">2</p>
+                                <p className="text-sm text-slate-500">Pilot Programs</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-brand-blue">15+</p>
+                                <p className="text-sm text-slate-500">Countries Interested</p>
+                            </div>
                         </div>
 
-                        {/* Product Links */}
-                        <div>
-                            <h4 className="font-bold text-slate-900 mb-4">Product</h4>
-                            <ul className="space-y-2 text-slate-500 text-sm">
-                                <li><Link href="/#features" className="hover:text-brand-blue">Features</Link></li>
-                                <li><Link href="/#safety" className="hover:text-safety-500">Safety</Link></li>
-                                <li><span className="text-slate-300 cursor-not-allowed">Download (Beta)</span></li>
-                            </ul>
-                        </div>
 
-                        {/* Company Links */}
-                        <div>
-                            <h4 className="font-bold text-slate-900 mb-4">Company</h4>
-                            <ul className="space-y-2 text-slate-500 text-sm">
-                                <li>
-                                    <Link href="/about" className="hover:text-brand-blue">About Us</Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact" className="hover:text-brand-blue">Contact Us</Link>
-                                </li>
-                                <li>
-                                    <Link href="/privacy-policy" className="hover:text-brand-blue">
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/terms-of-service" className="hover:text-brand-blue">
-                                        Terms of Service
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/eula" className="hover:text-brand-blue">
-                                        EULA
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
 
-                    <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-slate-400 text-sm">© 2025 ThePolyhistor. All rights reserved.</p>
+                    {/* Product Links */}
+                    <div>
+                        <h4 className="font-bold text-slate-900 mb-4">Product</h4>
+                        <ul className="space-y-3 text-slate-600 text-sm">
+                            <li>
+                                <Link href="/#features" className="hover:text-viral-red transition-colors">
+                                    Features
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/enterprise" className="hover:text-brand-blue transition-colors">
+                                    For Agencies
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/#community" className="hover:text-viral-purple transition-colors">
+                                    Community
+                                </Link>
+                            </li>
+                            <li>
+                                <span className="text-slate-400 cursor-not-allowed">
+                                    Download (Coming Spring 2025)
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <div className="flex space-x-6 mt-4 md:mt-0">
-                            {/*<a href="#" className="text-slate-400 hover:text-brand-blue transition-colors"><Twitter size={20} /></a>*/}
+                    {/* Company Links */}
+                    <div>
+                        <h4 className="font-bold text-slate-900 mb-4">Company</h4>
+                        <ul className="space-y-3 text-slate-600 text-sm">
+                            <li>
+                                <Link href="/about" className="hover:text-viral-red transition-colors">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="hover:text-viral-red transition-colors">
+                                    Contact Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/privacy-policy" className="hover:text-viral-red transition-colors">
+                                    Privacy Policy
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/terms-of-service" className="hover:text-viral-red transition-colors">
+                                    Terms of Service
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/eula" className="hover:text-viral-red transition-colors">
+                                    EULA
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="border-t border-slate-200 pt-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-slate-500 text-sm">
+                            © 2026 Polyhistor Inc. All rights reserved. Made with ❤️ for travelers.
+                        </p>
+
+                        {/* Social Links */}
+                        <div className="flex items-center gap-6">
+                            <a
+                                href="https://twitter.com/thepolyhistor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-slate-400 hover:text-viral-red transition-colors"
+                                aria-label="Follow us on Twitter"
+                            >
+                                <Twitter size={20} />
+                            </a>
                             <a
                                 href="https://www.linkedin.com/company/thepolyhistor"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-brand-blue transition-colors"
-                                aria-label="Visit ThePolyhistor on LinkedIn"
+                                aria-label="Visit Polyhistor on LinkedIn"
                             >
                                 <Linkedin size={20} />
                             </a>
-                            {/*<a href="#" className="text-slate-400 hover:text-brand-blue transition-colors"><Instagram size={20} /></a>*/}
+                            <a
+                                href="https://instagram.com/thepolyhistor"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-slate-400 hover:text-viral-purple transition-colors"
+                                aria-label="Follow us on Instagram"
+                            >
+                                <Instagram size={20} />
+                            </a>
                         </div>
                     </div>
                 </div>
-            </footer>
-        </>
+            </div>
+        </footer>
     );
 }

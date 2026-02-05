@@ -38,7 +38,7 @@ export default function CTASection({
                                     onClick={onJoinWaitlistClick}
                                     className="inline-flex items-center px-8 py-4 bg-white text-brand-blue text-lg font-bold rounded-full hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                                 >
-                                    Partner with Us <ArrowRight className="ml-2 w-5 h-5" />
+                                    Join Waitlist <ArrowRight className="ml-2 w-5 h-5" />
                                 </button>
                                 <button
                                     className="text-white/80 hover:text-white text-sm font-medium underline-offset-4 hover:underline transition-all"

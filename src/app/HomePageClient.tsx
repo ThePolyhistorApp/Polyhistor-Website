@@ -4,12 +4,12 @@ import { useModal } from "@/context/ModalContext";
 
 // Components
 import CTASection from "@/components/CTASection";
+import ChaosSection from "@/components/ChaosSection";
 import FAQSection from "@/components/FAQSection";
-import FeatureToggle from "@/components/FeatureToggle";
+import FeaturesSection from "@/components/FeaturesSection";
 import Hero from "@/components/Hero";
-import PrivacySection from "@/components/PrivacySection";
-import ProblemSection from "@/components/ProblemSection";
-
+import SocialProofSection from "@/components/SocialProofSection";
+import TrojanHorseSection from "@/components/TrojanHorseSection";
 
 export default function HomePageClient() {
     const { openModal } = useModal();
@@ -17,19 +17,22 @@ export default function HomePageClient() {
     return (
         <>
             <main className="antialiased font-sans text-slate-900">
-
+                {/* Consumer-First Hero */}
                 <Hero onJoinWaitlistClick={openModal} />
 
-                {/* The "Why" */}
-                <ProblemSection />
+                {/* The Chaos - Problem Section */}
+                <ChaosSection />
 
-                {/* The "Solution" (Two Apps in One) */}
-                <FeatureToggle />
+                {/* The Solution - Consumer Features */}
+                <FeaturesSection />
 
-                {/* The "Trust" (Dark Mode Contrast) */}
-                <PrivacySection />
+                {/* Social Proof & Testimonials */}
+                <SocialProofSection />
 
-                {/* Social Proof / Objections */}
+                {/* Bridge to Enterprise */}
+                <TrojanHorseSection />
+
+                {/* FAQ Section */}
                 <FAQSection />
 
                 {/* Final Call to Action */}

@@ -9,9 +9,15 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                // Existing brand colors (kept for compatibility)
-                "brand-blue": "#0A2A4E",
-                "brand-coral": "#FF6F61",
+        // Core Brand Colors
+        "brand-blue": "#0A2A4E",
+        "viral-red": "#FF2D55", // Primary CTA & accent color (sharper than coral)
+        "brand-coral": "#FF6F61", // Deprecated - use viral-red
+
+        // Viral Pop Colors for Consumer Appeal
+        "location-red": "#EF4444",
+        "notification-orange": "#FB923C",
+        "viral-purple": "#A855F7",
 
                 // NEW: Deep Teal/Blue for Trust & Safety Mode
                 safety: {
@@ -28,9 +34,14 @@ const config: Config = {
                     900: '#7c2d12',
                 }
             },
-            // Animation for the background blobs
+            // Enhanced animations for consumer-first UI
             animation: {
                 'blob': 'blob 7s infinite',
+                'float': 'float 6s ease-in-out infinite',
+                'draw-line': 'draw-line 2s ease-out forwards',
+                'shimmer': 'shimmer 2s linear infinite',
+                'scan': 'scan 1.5s ease-in-out forwards',
+                'bounce-gentle': 'bounce-gentle 2s infinite',
             },
             keyframes: {
                 blob: {
@@ -38,8 +49,43 @@ const config: Config = {
                     '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
                     '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
                     '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                }
-            }
+                },
+                float: {
+                    '0%, 100%': { transform: 'translateY(0px)' },
+                    '50%': { transform: 'translateY(-20px)' },
+                },
+                'draw-line': {
+                    '0%': { strokeDashoffset: '1000' },
+                    '100%': { strokeDashoffset: '0' },
+                },
+                shimmer: {
+                    '0%': { backgroundPosition: '-1000px 0' },
+                    '100%': { backgroundPosition: '1000px 0' },
+                },
+                scan: {
+                    '0%': { transform: 'translateY(100%)' },
+                    '50%': { transform: 'translateY(0%)' },
+                    '100%': { transform: 'translateY(-100%)' },
+                },
+                'bounce-gentle': {
+                    '0%, 100%': { transform: 'translateY(-5%)' },
+                    '50%': { transform: 'translateY(0)' },
+                },
+            },
+      // Glassmorphism utilities
+      backdropBlur: {
+        xs: "2px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "24px",
+      },
+      boxShadow: {
+        glass: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
+        "glass-lg": "0 12px 48px 0 rgba(31, 38, 135, 0.25)",
+        glow: "0 0 20px rgba(255, 45, 85, 0.5)",
+        "glow-blue": "0 0 20px rgba(10, 42, 78, 0.5)",
+      },
         },
     },
     plugins: [],

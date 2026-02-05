@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
 
         <div className="prose prose-slate max-w-none text-slate-700">
           <p className="mb-6">
-            ThePolyhistor LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy. This policy describes how we collect, use, and protect your information when you use the ThePolyhistor mobile application.
+            Polyhistor LLC (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy. This policy describes how we collect, use, and protect your information when you use the Polyhistor mobile application.
           </p>
 
           {/* 1. Information We Collect */}
@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
           <section className="mb-8 border-t border-slate-200 pt-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Contact Us</h2>
             <p>
-              For questions about this policy or to request account deletion, contact: ThePolyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
+              For questions about this policy or to request account deletion, contact: Polyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
             </p>
           </section>
 

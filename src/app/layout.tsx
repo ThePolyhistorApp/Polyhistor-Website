@@ -1,21 +1,24 @@
-import FirebaseAnalytics from "@/components/FirebaseAnalytics"; // NEW
+import FirebaseAnalytics from "@/components/FirebaseAnalytics";
 import Footer from "@/components/Footer";
 import GlobalWaitlistWrapper from "@/components/GlobalWaitlistWrapper";
 import Navbar from "@/components/Navbar";
+import StructuredData from "@/components/StructuredData";
 import { ModalProvider } from "@/context/ModalContext";
+import { structuredData } from "@/lib/seo-config";
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const siteConfig = {
-  title: "ThePolyHistor | The Operating System for Group Travel",
+  title: "Polyhistor | Never Lose Your Friends (Or Your Money) Again",
   description:
-    "Empower your agency with real-time liability protection and AI-guided travel tools. Join the future of student tour management.",
+    "The all-in-one app to track your squad, split costs instantly, and find the perfect middle point to meet. Group travel made simple for Gen Z travelers.",
   url: "https://thepolyhistor.com",
 };
 
@@ -85,7 +88,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className={manrope.className}>
+      <body className={inter.className}>
+        <StructuredData data={structuredData.consumer} />
+        <StructuredData data={structuredData.organization} />
         <FirebaseAnalytics />
         <ModalProvider>
           <Navbar />

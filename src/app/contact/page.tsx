@@ -10,7 +10,7 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         <p className="text-lg text-slate-600 mb-12 max-w-lg mx-auto">
-          Have questions about ThePolyhistor? Whether you're a tour agency looking for a demo or just curious, we're here to help.
+          Have questions about Polyhistor? Whether you're a tour agency looking for a demo or just curious, we're here to help.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

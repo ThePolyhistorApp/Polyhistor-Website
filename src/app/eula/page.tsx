@@ -8,7 +8,7 @@ export default function EULA() {
 
         <div className="prose prose-slate max-w-none text-slate-700">
           <p className="mb-6">
-            This End User License Agreement (&quot;Agreement&quot;) is a binding legal agreement between you (&quot;User&quot; or &quot;You&quot;) and ThePolyhistor LLC (&quot;Company,&quot; &quot;We,&quot; &quot;Us,&quot; or &quot;Our&quot;). This Agreement governs your use of the ThePolyhistor mobile application (the &quot;App&quot;) on any platform (iOS, Android, etc.).
+            This End User License Agreement (&quot;Agreement&quot;) is a binding legal agreement between you (&quot;User&quot; or &quot;You&quot;) and Polyhistor LLC (&quot;Company,&quot; &quot;We,&quot; &quot;Us,&quot; or &quot;Our&quot;). This Agreement governs your use of the Polyhistor mobile application (the &quot;App&quot;) on any platform (iOS, Android, etc.).
           </p>
           <p className="font-bold mb-6">
             BY DOWNLOADING, INSTALLING, OR USING THE APP, YOU AGREE TO BE BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT DOWNLOAD OR USE THE APP.
@@ -18,7 +18,7 @@ export default function EULA() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Scope of License</h2>
             <p>
-              ThePolyhistor LLC grants you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes strictly in accordance with the terms of this Agreement and the Usage Rules set forth in the Apple Media Services Terms and Conditions and the Google Play Terms of Service.
+              Polyhistor LLC grants you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial purposes strictly in accordance with the terms of this Agreement and the Usage Rules set forth in the Apple Media Services Terms and Conditions and the Google Play Terms of Service.
             </p>
           </section>
 
@@ -29,7 +29,7 @@ export default function EULA() {
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>Prohibited Content:</strong> You may not upload, share, or transmit content that is offensive, defamatory, pornographic, hateful, discriminatory, or promotes illegal acts.</li>
               <li><strong>Reporting & Blocking:</strong> You agree to use the provided in-app tools to Report inappropriate content or Block abusive users.</li>
-              <li><strong>Enforcement:</strong> ThePolyhistor LLC will review reported content within 24 hours. We reserve the right to remove any content and immediately terminate the account of any user found violating these standards without prior notice.</li>
+              <li><strong>Enforcement:</strong> Polyhistor LLC will review reported content within 24 hours. We reserve the right to remove any content and immediately terminate the account of any user found violating these standards without prior notice.</li>
             </ul>
           </section>
 
@@ -39,7 +39,7 @@ export default function EULA() {
             <p className="mb-4">The App utilizes artificial intelligence technologies (including Google Gemini) to generate travel recommendations and itineraries.</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
               <li><strong>No Warranty of Accuracy:</strong> AI-generated content may contain errors, &quot;hallucinations,&quot; or outdated information regarding opening hours, prices, or locations.</li>
-              <li><strong>User Responsibility:</strong> You acknowledge that you must independently verify all AI-generated suggestions before relying on them. ThePolyhistor LLC is not liable for any missed flights, closed venues, or financial losses resulting from AI errors.</li>
+              <li><strong>User Responsibility:</strong> You acknowledge that you must independently verify all AI-generated suggestions before relying on them. Polyhistor LLC is not liable for any missed flights, closed venues, or financial losses resulting from AI errors.</li>
             </ul>
           </section>
 
@@ -59,7 +59,7 @@ export default function EULA() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">5. Third-Party Agencies</h2>
             <p className="mb-4">If you use the App to participate in a trip organized by a third-party Travel Agency (&quot;Agency&quot;):</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Relationship:</strong> The Agency is independent of ThePolyhistor LLC. We provide the technology platform but do not control the Agency&apos;s operations or decisions.</li>
+              <li><strong>Relationship:</strong> The Agency is independent of Polyhistor LLC. We provide the technology platform but do not control the Agency&apos;s operations or decisions.</li>
               <li><strong>Data Sharing:</strong> You acknowledge that the Agency may have access to your location and trip progress during active Agency trips.</li>
             </ul>
           </section>
@@ -68,7 +68,7 @@ export default function EULA() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Updates and Maintenance</h2>
             <p>
-              ThePolyhistor LLC may generally provide updates to the App but is under no obligation to provide support or maintenance. You acknowledge that Apple and Google have no obligation whatsoever to furnish any maintenance and support services with respect to the App.
+              Polyhistor LLC may generally provide updates to the App but is under no obligation to provide support or maintenance. You acknowledge that Apple and Google have no obligation whatsoever to furnish any maintenance and support services with respect to the App.
             </p>
           </section>
 
@@ -101,9 +101,9 @@ export default function EULA() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Specific Terms for Apple iOS Users</h2>
             <p className="mb-4">If you downloaded the App from the Apple App Store, you acknowledge and agree that:</p>
             <ul className="list-disc pl-6 space-y-2 mb-4">
-              <li><strong>Parties:</strong> This Agreement is between You and ThePolyhistor LLC only, not Apple. Apple is not responsible for the App or its content.</li>
+              <li><strong>Parties:</strong> This Agreement is between You and Polyhistor LLC only, not Apple. Apple is not responsible for the App or its content.</li>
               <li><strong>Product Claims:</strong> Apple is not responsible for addressing any claims relating to the App, including product liability claims or failure to conform to legal requirements.</li>
-              <li><strong>Intellectual Property:</strong> In the event of any third-party claim that the App infringes solely on their intellectual property rights, ThePolyhistor LLC, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such claim.</li>
+              <li><strong>Intellectual Property:</strong> In the event of any third-party claim that the App infringes solely on their intellectual property rights, Polyhistor LLC, not Apple, will be solely responsible for the investigation, defense, settlement, and discharge of any such claim.</li>
               <li><strong>Third-Party Beneficiary:</strong> Apple and its subsidiaries are third-party beneficiaries of this Agreement. Upon your acceptance of this Agreement, Apple will have the right to enforce this Agreement against you.</li>
             </ul>
           </section>
@@ -120,7 +120,7 @@ export default function EULA() {
           <section className="mb-8 border-t border-slate-200 pt-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">12. Contact Information</h2>
             <p>
-              If you have any questions, complaints, or claims with respect to the App, please contact us at: ThePolyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
+              If you have any questions, complaints, or claims with respect to the App, please contact us at: Polyhistor LLC <br /> Email: <a href="mailto:legal@thepolyhistor.com" className="text-brand-blue hover:underline">legal@thepolyhistor.com</a>
             </p>
           </section>
 
