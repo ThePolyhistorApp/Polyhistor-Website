@@ -29,7 +29,7 @@ export default function CTASection({
                 Ready to upgrade your tours?
               </h2>
               <p className="text-lg text-blue-100 max-w-xl mx-auto mb-10">
-                Join 85+ organizers on the waitlist building the future of safe
+                Join 90+ organizers on the waitlist building the future of safe
                 travel.
               </p>
 
