@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     text: "This is going to be a game changer for our study abroad group 💯",
-    author: "@travelwithcoo",
+    author: "Josh",
     platform: "Instagram",
     color: "bg-purple-50 border-purple-200",
   },
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     text: "Our group will plan to use this for our summer trip",
-    author: "@collegetrips",
+    author: "Jon",
     platform: "Linkedin",
     color: "bg-orange-50 border-orange-200",
   },
