@@ -75,7 +75,7 @@ export default function Hero({
                 >
                     <span className="flex h-2 w-2 rounded-full bg-viral-red mr-2 animate-pulse" />
                     <span className="text-sm font-medium text-slate-600">
-                        90+ already on the waitlist • Launching Spring 2025
+                        90+ already on the waitlist • Launching Spring 2026
                     </span>
                 </motion.div>
 

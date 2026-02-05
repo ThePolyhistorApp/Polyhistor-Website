@@ -60,7 +60,7 @@ export default function QRCodeModal({ isOpen, onClose }: QRCodeModalProps) {
                 Join the Waitlist
               </h2>
               <p className="text-slate-600">
-                Be first to know when we launch Spring 2025
+                Be first to know when we launch Spring 2026
               </p>
             </div>
 

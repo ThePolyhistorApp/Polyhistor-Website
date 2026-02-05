@@ -71,7 +71,7 @@ export default function ThankYouPage() {
           </div>
 
           <p className="text-sm text-slate-500 mb-8">
-            Launching <strong>Spring 2025</strong>
+            Launching <strong>Spring 2026</strong>
           </p>
 
           {/* Back to Homepage */}

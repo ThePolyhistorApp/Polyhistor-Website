@@ -64,7 +64,7 @@ export default function Footer() {
                             </li>
                             <li>
                                 <span className="text-slate-400 cursor-not-allowed">
-                                    Download (Coming Spring 2025)
+                                    Download (Coming Spring 2026)
                                 </span>
                             </li>
                         </ul>

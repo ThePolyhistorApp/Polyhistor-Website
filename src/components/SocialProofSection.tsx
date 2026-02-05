@@ -73,7 +73,7 @@ export default function SocialProofSection() {
           <div className="flex items-center justify-center gap-2 text-notification-orange">
             <Sparkles className="w-6 h-6 fill-current" />
             <span className="text-lg font-semibold text-slate-700">
-              Launching Spring 2025
+              Launching Spring 2026
             </span>
           </div>
         </motion.div>
