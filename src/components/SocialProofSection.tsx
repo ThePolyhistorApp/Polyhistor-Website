@@ -8,8 +8,8 @@ import TrustBadge from "./TrustBadge";
 const testimonials = [
   {
     text: "Can't wait to try this on our Spring Break trip! 🙌",
-    author: "@sarahstudies",
-    platform: "Twitter",
+    author: "Adithya",
+    platform: "Linkedin",
     color: "bg-blue-50 border-blue-200",
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     text: "This is going to be a game changer for our study abroad group 💯",
-    author: "@travelmaddy",
+    author: "@travelwithcoo",
     platform: "Instagram",
     color: "bg-purple-50 border-purple-200",
   },
