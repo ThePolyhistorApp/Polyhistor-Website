@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <Link href="/" className="mb-6 block">
                             <NextImage
-                                src="/full-logo.png"
+                                src="/polyhistor-logo.svg"
                                 alt="Polyhistor"
                                 width={250}
                                 height={50}

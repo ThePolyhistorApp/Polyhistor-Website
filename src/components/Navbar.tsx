@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/full-logo.png"
+              src="/polyhistor-logo.svg"
               alt="Polyhistor"
               width={200}
               height={40}

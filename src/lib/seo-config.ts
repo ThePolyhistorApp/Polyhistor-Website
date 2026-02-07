@@ -56,7 +56,7 @@ export const structuredData = {
     "@type": "Organization",
     name: "Polyhistor",
     url: "https://thepolyhistor.com",
-    logo: "https://thepolyhistor.com/logo.png",
+    logo: "https://thepolyhistor.com/polyhistor-logo.svg",
     sameAs: [
       "https://twitter.com/thepolyhistor",
       "https://instagram.com/thepolyhistor",
