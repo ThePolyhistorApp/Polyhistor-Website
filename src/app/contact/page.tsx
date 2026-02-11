@@ -1,6 +1,12 @@
 
 import { Mail, MessageSquare } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Polyhistor",
+  description: "Get in touch with the Polyhistor team for support, partnerships, or general inquiries.",
+};
 
 export default function ContactPage() {
   return (
